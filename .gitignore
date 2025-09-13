@@ -130,3 +130,4 @@ Thumbs.db
 build/
 *.whl
 *.tar.gz
+.config/
