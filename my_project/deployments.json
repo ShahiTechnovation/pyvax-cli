@@ -1,0 +1,56 @@
+{
+  "fuji": {
+    "StakeToken": {
+      "contract_name": "StakeToken",
+      "address": "0x452bfaF6F666E5Fd790a77d66D4DC673cdF74FE9",
+      "tx_hash": "2218dbca5a24adba9b28da8d03b4c792d78cf7127217095604c9b18f2d09e079",
+      "gas_used": 215490,
+      "gas_price": 2,
+      "deployment_cost": 4.3098e-13,
+      "network": "fuji",
+      "chain_id": 43113,
+      "deployer": "0x7F79991446a8Bf4e77bD96Afad009171C68Ad34a",
+      "constructor_args": [],
+      "block_number": 45970957
+    },
+    "BeginnerToken": {
+      "contract_name": "BeginnerToken",
+      "address": "0x345B59836431dD8A375c66d2873AcFAF2c869bCF",
+      "tx_hash": "673b7604ab810ad684f42453addd01dfe9714bed6ce87ceef31b9fc66156ea60",
+      "gas_used": 122674,
+      "gas_price": 2,
+      "deployment_cost": 2.45348e-13,
+      "network": "fuji",
+      "chain_id": 43113,
+      "deployer": "0x7F79991446a8Bf4e77bD96Afad009171C68Ad34a",
+      "constructor_args": [],
+      "block_number": 45968591
+    },
+    "Defi": {
+      "contract_name": "Defi",
+      "address": "0x7979e0ABE1E0ca5035350cbd10ff0ec02F219e27",
+      "tx_hash": "8e77f365718cf08d5dc22bfd2a073f73da8b4eaa7041a5337bdb633b0c5b6ea8",
+      "gas_used": 522271,
+      "gas_price": 2,
+      "deployment_cost": 1.044542e-12,
+      "network": "fuji",
+      "chain_id": 43113,
+      "deployer": "0x7F79991446a8Bf4e77bD96Afad009171C68Ad34a",
+      "constructor_args": [],
+      "block_number": 45969365
+    },
+    "mint": {
+      "contract_name": "mint",
+      "address": "0x5Bb86dd065aD69e3f95aE84B39D12786909a6e67",
+      "tx_hash": "fe317743c224dcd1d2252d926bab513f40be3b533d25a52a7a8a234edadb24ae",
+      "gas_used": 113166,
+      "gas_price": 2,
+      "deployment_cost": 2.26332e-13,
+      "network": "fuji",
+      "chain_id": 43113,
+      "deployer": "0x7F79991446a8Bf4e77bD96Afad009171C68Ad34a",
+      "constructor_args": [],
+      "block_number": 45970948
+    }
+  }
+}

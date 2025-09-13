@@ -1,0 +1,30 @@
+{
+  "fuji": {
+    "SimpleStorage": {
+      "contract_name": "SimpleStorage",
+      "address": "0xa187fD3310Da61AE27C541f15053364dFb081b43",
+      "tx_hash": "5de04a9236e9f0d3bd747668c8b941242883af49f9d2b4e555016ca06f0bada2",
+      "gas_used": 69588,
+      "gas_price": 2,
+      "deployment_cost": 1.39176e-13,
+      "network": "fuji",
+      "chain_id": 43113,
+      "deployer": "0x7F79991446a8Bf4e77bD96Afad009171C68Ad34a",
+      "constructor_args": [],
+      "block_number": 45968804
+    },
+    "VotingContract": {
+      "contract_name": "VotingContract",
+      "address": "0xfC3E3302146E3D405de142A15Cf605b2BA34AFf0",
+      "tx_hash": "e8750c20e2fff5e59b0b08cbf3c1f3e018a29385e90e407610960b08ef77a88d",
+      "gas_used": 136010,
+      "gas_price": 2,
+      "deployment_cost": 2.7202e-13,
+      "network": "fuji",
+      "chain_id": 43113,
+      "deployer": "0x7F79991446a8Bf4e77bD96Afad009171C68Ad34a",
+      "constructor_args": [],
+      "block_number": 45968878
+    }
+  }
+}
