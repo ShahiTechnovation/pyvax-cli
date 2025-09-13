@@ -59,7 +59,7 @@ class WalletManager:
     
     def get_private_key(self, keystore_file: str = None, password: str = None) -> str:
         """
-        Get private key from environment variable or keystore.
+        Get private key from environment variable, .env file, or keystore.
         
         Args:
             keystore_file: Path to encrypted keystore (optional)
@@ -77,6 +77,15 @@ class WalletManager:
             else:
                 return f"0x{env_key}"
         
+        # Second, try loading from .env file
+        env_key = self._load_from_env_file()
+        if env_key:
+            # Ensure it's properly formatted
+            if env_key.startswith("0x"):
+                return env_key
+            else:
+                return f"0x{env_key}"
+        
         # Fall back to keystore file
         if keystore_file and password:
             return self._load_encrypted_key(keystore_file, password)
@@ -87,8 +96,8 @@ class WalletManager:
             return self._load_encrypted_key(default_keystore, password)
         
         raise ValueError(
-            "No private key found. Set PRIVATE_KEY environment variable or "
-            "provide keystore file with password."
+            "No private key found. Set PRIVATE_KEY environment variable, "
+            "add PRIVATE_KEY to .env file, or provide keystore file with password."
         )
     
     def get_address_from_env(self) -> str:
@@ -180,6 +189,28 @@ class WalletManager:
         
         except Exception as e:
             raise ValueError(f"Failed to decrypt keystore: {e}")
+    
+    def _load_from_env_file(self) -> Optional[str]:
+        """Load PRIVATE_KEY from .env file."""
+        env_files = [".env", "../.env", "../../.env"]  # Check current and parent directories
+        
+        for env_file in env_files:
+            env_path = Path(env_file)
+            if env_path.exists():
+                try:
+                    with open(env_path, 'r') as f:
+                        for line in f:
+                            line = line.strip()
+                            if line.startswith('PRIVATE_KEY='):
+                                # Extract value after =, remove quotes if present
+                                value = line.split('=', 1)[1]
+                                value = value.strip('"\'')  # Remove quotes
+                                if value:
+                                    return value
+                except Exception:
+                    continue  # Try next file if this one fails
+        
+        return None
     
     def validate_private_key(self, private_key: str) -> bool:
         """Validate that a private key is properly formatted."""
